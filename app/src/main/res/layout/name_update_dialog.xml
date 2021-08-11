@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Change Name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/newNameRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/user_input_frame"
+        android:elevation="10dp"
+        app:layout_constraintCircleRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/newNameCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            app:cardCornerRadius="5dp">
+
+            <EditText
+                android:id="@+id/newNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto"
+                android:hint="Name"
+                android:maxLines="1"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/countdownTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="20/20"
+        android:layout_marginEnd="32dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/changePasswordRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCV">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/changePasswordCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changeNameButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</LinearLayout>

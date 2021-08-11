@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ChatHubRetry" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/logo_color_light</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/matteBlack</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">#424242</item>
+        <item name="android:colorSecondary">@color/white</item>
+        <item name="android:colorAccent">@color/bannerBlack</item>
+        <item name="android:colorButtonNormal">@color/logo_color_light</item>
+
+
+        <item name="android:windowActivityTransitions">true</item>
+
+    </style>
+</resources>

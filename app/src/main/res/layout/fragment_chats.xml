@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatsFragment">
+
+
+
+    <RelativeLayout
+        android:id="@+id/searchViewChatsRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/user_input_frame"
+        android:elevation="10dp"
+        app:layout_constraintCircleRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchChatsCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            app:cardCornerRadius="5dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchViewChats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:queryBackground="@android:color/transparent"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search For Chats..." />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerViewChats"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchViewChatsRelativeLayout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingChats"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/splashscreenloading"
+            app:lottie_repeatCount="15" />
+
+        <TextView
+            android:id="@+id/fetchingChatsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.7"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Fetching Chats"
+            android:textColor="#2F9DFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

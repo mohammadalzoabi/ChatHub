@@ -1,0 +1,2 @@
+rootProject.name = "ChatHub Retry"
+include ':app'

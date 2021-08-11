@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="logo_color_dark">#0688CE</color>
+    <color name="logo_color_light">#019BDF</color>
+
+    <color name="bannerBlack">#2E2E2E</color>
+    <color name="bannerWhite">#FFFFFFFF</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="offWhite">#F5F5F5</color>
+    <color name="matteBlack">#171717</color>
+
+
+    <color name="chatLeftLightMode">#EFEFEF</color>
+    <color name="chatRightLightMode">#41A8F5</color>
+
+    <color name="chatLeftDarkMode">#373945</color>
+    <color name="chatRightDarkMode">#41A8F5</color>
+
+    <color name="deleteColor">#ff6961</color>
+
+    <color name="grey">#878787</color>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "547083878393",
+    "firebase_url": "https://chathub-new-default-rtdb.firebaseio.com",
+    "project_id": "chathub-new",
+    "storage_bucket": "chathub-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547083878393:android:c45c1ae375597fb3174728",
+        "android_client_info": {
+          "package_name": "com.moalzoabi.chathub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547083878393-rdsol0tr68c93ej4rc15u3sunfnjf8pb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDekFcIQlejoeAgxBJVyjns_mOvpuQqu8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547083878393-rdsol0tr68c93ej4rc15u3sunfnjf8pb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/buttonChangeEmailRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        app:layout_constraintBottom_toTopOf="@id/logOutRelativeLayout"
+        app:layout_constraintEnd_toStartOf="@id/buttonChangePasswordRelativeLayout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/emailCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changeEmailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change\nEmail"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/buttonChangePasswordRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        app:layout_constraintBottom_toTopOf="@id/logOutRelativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonChangeEmailRelativeLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/passwordCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changePasswordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change\nPassword"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profileCV"
+        app:cardElevation="-50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/profileTabUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shapeLayout2" />
+
+            <RelativeLayout
+                android:id="@+id/shapeLayout2"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circularbordershape"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toTopOf="@+id/profileTabUsername"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:cardCornerRadius="360dp"
+                    app:cardElevation="-10dp">
+
+                    <ImageView
+                        android:id="@+id/profileTabImage"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/logo" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:id="@+id/usernameRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usernameCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changeUsernameButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change Name"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bioRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameRelativeLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bioCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changeBioButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change Status"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/buttonPictureRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bioRelativeLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pictureCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/changePictureButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Change Picture"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/accountSettingsRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/logOutRelativeLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/accountSettingsCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="?android:attr/colorButtonNormal"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/accountSettingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="?android:attr/colorButtonNormal"
+                android:fontFamily="@font/roboto_light"
+                android:text="Account Settings"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/logOutRelativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/user_input_frame"
+        android:backgroundTint="#ff6961"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttonCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardBackgroundColor="#ff6961"
+            app:cardCornerRadius="5dp">
+
+            <Button
+                android:id="@+id/logOutButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:backgroundTint="#ff6961"
+                android:fontFamily="@font/roboto_light"
+                android:text="LOG OUT"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/colorButtonNormal"
+        android:backgroundTint="?android:attr/colorButtonNormal"
+        app:layout_constraintBottom_toTopOf="@+id/usernameRelativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
